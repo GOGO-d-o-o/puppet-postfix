@@ -89,7 +89,7 @@ class postfix::files {
     'myorigin':         value => $myorigin;
   }
 
-  case $facts['os']['family'] {
+  case $::osfamily {
     'RedHat': {
       ::postfix::config {
         'mailq_path':       value => '/usr/bin/mailq.postfix';
